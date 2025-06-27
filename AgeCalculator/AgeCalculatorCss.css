@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #FBDABB;
+}
+#HeadingContainer{
+    display: flex;
+    justify-content: center;
+    color: #495E54;
+    height: 4em;
+    margin: 0;
+}
+.container{
+    padding-top: 5px;
+    width: 45vw;
+    height: 70vh;
+    background-color: #495E54;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
