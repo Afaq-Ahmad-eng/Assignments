@@ -15,7 +15,7 @@ This is a simple **Age Calculator** web application built using **HTML**, **CSS*
 
 ## Demo
 
-[![Age Calculator Screenshot link below](Assignments/assests/Age_calculation.png)](Assignments/assests/Age_calculation_1.png)
+[![Age Calculator Screenshot link below](./AgeCalculator/assests/Age_calculation.png)](./AgeCalculator/assests/Age_calculation_1.png)
 ## Project Structure
 
 Assignments/AgeCalculator
