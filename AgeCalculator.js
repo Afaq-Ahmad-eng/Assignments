@@ -5,33 +5,24 @@ const calculate = document.getElementById("Calculate");
 // we create a function to handle the calculation
 function handleCalculation() {
     const birthDay = document.getElementById("dateOfBirthInput").value;
-    console.log(`${birthDay} type of this is ${typeof(birthDay)}`);
-        
+    
     const currentDate = new Date();
     const birthDayOfUser = new Date(birthDay);
     
     // Current Year and the birth day Year and asign to appropriate variable
     let currentYear =  currentDate.getFullYear();
-    console.log(`Currrent Year is ${currentYear}`);
     
     let birthDayYear = birthDayOfUser.getFullYear();
-    console.log(`birth day Year is ${birthDayYear}`);
     
     // Current Month and the birth day Month and asign to appropriate variable
     let currentMonth = (currentDate.getMonth() + 1);
-
-    console.log(`Current Month = ${currentMonth}`);
     
     let birthDayMonth = birthDayOfUser.getMonth() + 1;
-    console.log(`Birth day Month = ${birthDayMonth}`);
 
     // Current Month and the birth day Month and asign to appropriate variable
     let birthDayDate = birthDayOfUser.getDate();
-
-    console.log(`Birth Day date ${birthDayDate}`);
     
     let todayDate = currentDate.getDate();
-    console.log(`Current date ${todayDate}`);
 
   //  In the if block below, we check whether the birthday date can be subtracted from the current date. If yes, then the if block will execute; otherwise, the else block will execute.
    if(todayDate > birthDayDate){
