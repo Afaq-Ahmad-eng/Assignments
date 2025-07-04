@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #FBDABB;
+}
+#mainCOntainer{
+    display: flex;
+}
+#HeadingContainer{
+    display: flex;
+    justify-content: center;
+    color: #495E54;
+    height: 4em;
+    margin: 0;
+}
+.container{
+    margin: 1rem;
+    padding: 10px;
+    width: 45vw;
+    height: 70vh;
+    color: white;
+    background-color: #495E54;
+    border-radius: 10px;
+}
+.information{
+    margin: 1rem;
+    padding: 10px;
+    width: 93vw;
+    height: 70vh;
+    color: white;
+    display: flex;
+    background-color: #495E54;
+    border-radius: 10px;
+}
+.informationRelatedToTheLeapYear{
+     width: 45vw;
+     margin: 5px;
+     overflow-y: auto;
+}
+.informationRelatedToAgeCalculation{
+   width: 45vw;
+   margin: 5px;
+   overflow-y: auto;
+}
+.container form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 10px;
+}
+
+input[type="text"], input[type="date"], input[type="submit"] {
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #495E54;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #b9b645;
+}
+.links{
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+    #mainCOntainer,
+    .information {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container,
+    .informationRelatedToTheLeapYear,
+    .informationRelatedToAgeCalculation {
+        width: 90vw;
+        height: auto;
+    }
+
+    #HeadingContainer {
+        font-size: 1.2em;
+        height: auto;
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="submit"] {
+        font-size: 14px;
+    }
+}
