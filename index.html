@@ -13,14 +13,14 @@
       </div>
       <div id="mainCOntainer">
         <div id="container" class="container">
-          <form>
+          <form onsubmit="return validateDate()">
             <input
               type="text"
               placeholder="Enter your Name"
               id="inputForuserName"
             />
 
-            <input type="text" id="dateOfBirthInput" placeholder="MM-DD-YYYY" pattern="\d{2}-\d{2}-\d{4}">
+            <input type="text" id="dateOfBirthInput" placeholder="MM/DD/YYYY" pattern="\d{2}-\d{2}-\d{4}">
             <input type="submit" value="Calculate" id="Calculate" />
           </form>
         </div>
