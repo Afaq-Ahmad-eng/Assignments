@@ -94,6 +94,6 @@ input[type="submit"]:hover {
     input[type="date"],
     input[type="submit"] {
         font-size: 14px;
-        width: 98vw;
+        width: 98rem;
     }
 }
