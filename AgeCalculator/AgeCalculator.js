@@ -56,36 +56,54 @@ function handleCalculation() {
     }
    }
 
-   //the below code we will today the code line No is 59  
+   //In this if block, we check whether the birth month can be subtracted from the current month. If it can, the if block will execute; otherwise, the else block will run.
    if(currentMonth > birthDayMonth){
      birthDayMonth = currentMonth - birthDayMonth;
      birthDayYear = currentYear - birthDayYear;
    }else{
+    // Here, we borrow one full year (12 months), add it to the current month, and then subtract the birth month from the updated current month. We also subtract 1 from the current year, and then subtract the birth year from the updated current year.
     currentYear = currentYear - 1;
     birthDayMonth = ((currentMonth + 12) - birthDayMonth);
     birthDayYear = currentYear - birthDayYear;
    }
+  //  Here, we return currentDate, birthDayOfUser, birthDayYear, birthDayMonth, and birthDayDate. We return currentDate and birthDayOfUser as they are needed later in the code without any changes.
  return [currentDate, birthDayOfUser, birthDayYear, birthDayMonth, birthDayDate];
 }
 
+// The function below is responsible for creating and adding elements to the DOM. Within this function, we also call the handleCalculation function.
 function handleNewElements(){
   let [currentDate, birthDayOfUser, birthDayYear, birthDayMonth, birthDayDate] = handleCalculation();
 
   let nextBirthDay = new Date(currentDate.getFullYear(), (birthDayOfUser.getMonth()), birthDayOfUser.getDate());
-  console.log(nextBirthDay);
   
 
   let months = ((birthDayYear * 12) + birthDayMonth);
-  let days = (((birthDayYear * 365.24219) + ((birthDayMonth / 12) * 365.24219)) + birthDayDate);
+  let days =(((birthDayYear * 365.24219) + ((birthDayMonth / 12) * 365.24219)) + birthDayDate);
+  
+  // Below adjust weeks and days
 
   let remainDaysFromWeeks =(days % 7);
 
   let weeks = Math.floor(days / 7);
+
+  // Below, we adjust the day: if the number of days is greater than 7, it is converted into week(s), and the remaining days are adjusted accordingly.
+  let  weeksIfDaysGreaterThen7 = 0;
+  let  daysRemainsWhichIsLessThan7 = 0;
+  if(birthDayDate >= 7){
+    weeksIfDaysGreaterThen7 = Math.floor(birthDayDate / 7);
+    
+    daysRemainsWhichIsLessThan7 = (birthDayDate % 7);
+  }else{
+    daysRemainsWhichIsLessThan7 = birthDayDate;
+  }
+  
+
+  
   let userName = document.getElementById('inputForuserName').value;
   let heading = document.createElement('p');
   heading.innerHTML = `<h3>Age : </h3>
 
-  Mr/Mss ${userName} Your are old
+  ${userName} Your are old
 
   ${birthDayYear = (birthDayMonth === 12 ? birthDayYear + 1 : birthDayYear)} Years
 
@@ -93,33 +111,43 @@ function handleNewElements(){
 
   ${birthDayDate} Days <br> or ${months.toLocaleString()} Months
 
-  ${birthDayDate = (birthDayDate === 0 ? "" : birthDayDate + " Days")} <br> or
+  ${weeksIfDaysGreaterThen7 = (weeksIfDaysGreaterThen7 < 1 ? "" : (weeksIfDaysGreaterThen7 > 1 ? weeksIfDaysGreaterThen7 + " Weeks" : weeksIfDaysGreaterThen7 + " Week"))}
 
-  ${weeks.toLocaleString()} Weeks ${birthDayDate === 0 ? "" : Math.floor(remainDaysFromWeeks) + " Days"}  <br>or
+  ${daysRemainsWhichIsLessThan7 = (daysRemainsWhichIsLessThan7 === 0 ? "" : (daysRemainsWhichIsLessThan7 > 1 ? daysRemainsWhichIsLessThan7 + " Days" : daysRemainsWhichIsLessThan7 + " Day"))} <br> or
 
-  ${Math.floor(days).toLocaleString()} Days <br>or ${(Math.floor(days) * 24).toLocaleString()} Hours <br>or
+  ${weeks.toLocaleString()} Weeks ${birthDayDate === 0 ? "" : Math.round(remainDaysFromWeeks) + " Days"}  <br>or
 
-  ${((Math.floor(days) * 24) * 60).toLocaleString()} Minutes <br>or ${(((Math.floor(days) * 24) * 60) * 60).toLocaleString()}
+  ${Math.round(days).toLocaleString()} Days <br>or ${(Math.round(days) * 24).toLocaleString()} Hours <br>or
+
+  ${((Math.round(days) * 24) * 60).toLocaleString()} Minutes <br>or ${(((Math.round(days) * 24) * 60) * 60).toLocaleString()}
 
   Seconds <div> Your Next Birth will be on 
   
   ${nextBirthDay = (nextBirthDay.getMonth() < (currentDate.getMonth() + 1) ? 
 
-    (nextBirthDay.getFullYear() + 1)
-    
-    +"-"+
-    
     (nextBirthDay.getMonth() + 1)
     
     +"-"+
     
-    nextBirthDay.getDate() : nextBirthDay.getFullYear()
+    nextBirthDay.getDate() 
     
     +"-"+
     
+    (nextBirthDay.getFullYear() + 1)
+    
+    :
+    
     (birthDayOfUser.getMonth() + 1)
     
-    +"-"+birthDayOfUser.getDate())}
+    +"-"+
+    
+    birthDayOfUser.getDate()
+    
+    +"-"+
+    
+    nextBirthDay.getFullYear()
+  
+  )}
     
     </div>`;
   let container = document.getElementById('containerForInfoShowing');
@@ -127,7 +155,7 @@ function handleNewElements(){
   container.appendChild(heading);
 }
 
-// We create a Event Listener to lisen when the calculate button is click
+// We create an event listener to listen for a click on the Calculate button, and within this listener, we call the handleNewElements function.
 calculate.addEventListener("click", (e) => {
   e.preventDefault();
   handleNewElements();
