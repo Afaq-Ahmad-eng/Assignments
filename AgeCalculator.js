@@ -161,14 +161,3 @@ calculate.addEventListener("click", (e) => {
   e.preventDefault();
   handleNewElements();
 });
-
-window.addEventListener("resize", () => {
-  const isMobile = window.innerWidth <= 768;
-  if (isMobile) {
-    desktopInput.style.display = "none";
-    mobileInput.style.display = "block";
-  } else {
-    desktopInput.style.display = "block";
-    mobileInput.style.display = "none";
-  }
-});
