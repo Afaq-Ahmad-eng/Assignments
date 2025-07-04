@@ -25,7 +25,8 @@ body{
 .information{
     margin: 1rem;
     padding: 10px;
-    width: 95.4%;
+    width: 94.4%;
+    gap: 2rem;
     height: 70vh;
     color: white;
     display: flex;
