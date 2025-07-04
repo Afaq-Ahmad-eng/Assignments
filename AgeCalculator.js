@@ -74,6 +74,20 @@ function handleCalculation() {
 function handleNewElements(){
   let [currentDate, birthDayOfUser, birthDayYear, birthDayMonth, birthDayDate] = handleCalculation();
 
+
+   const isMobile = window.innerWidth <= 768;
+
+  const desktopInput = document.getElementById("dateOfBirthInput");
+  const mobileInput = document.getElementById("mobileDateInput");
+
+  if (isMobile) {
+    desktopInput.style.display = "none";
+    mobileInput.style.display = "block";
+  } else {
+    desktopInput.style.display = "block";
+    mobileInput.style.display = "none";
+  }
+
   let nextBirthDay = new Date(currentDate.getFullYear(), (birthDayOfUser.getMonth()), birthDayOfUser.getDate());
   
 
