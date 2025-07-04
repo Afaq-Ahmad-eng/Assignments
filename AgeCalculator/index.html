@@ -1,30 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="AgeCalculatorCss.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="AgeCalculatorCss.css" />
     <title>Age Calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-           <div id="HeadingContainer">
-            <h1>Age Calculator</h1>
-        </div>
-        <div id="mainCOntainer">
+      <div id="HeadingContainer">
+        <h1>Age Calculator</h1>
+      </div>
+      <div id="mainCOntainer">
         <div id="container" class="container">
-            <form>
-                <input type="text" placeholder="Enter your Name" id="inputForuserName">
-                <input type="date" placeholder="Enter your date of birth" id="dateOfBirthInput">
-                <input type="submit" value="Calculate" id="Calculate">
-            </form>
+          <form>
+            <input
+              type="text"
+              placeholder="Enter your Name"
+              id="inputForuserName"
+            />
+            <input
+              type="date"
+              placeholder="Enter your date of birth"
+              id="dateOfBirthInput"
+            />
+            <input type="submit" value="Calculate" id="Calculate" />
+          </form>
         </div>
-        <div id="containerForInfoShowing" class="container">
-            
+        <div id="containerForInfoShowing" class="container"></div>
+      </div>
+      <div class="information">
+        <div class="informationRelatedToTheLeapYear">
+          <h1>Leap Year</h1>
+          <p>
+            A leap year adds one extra day, February 29th, to the calendar to
+            keep it in sync with the Earth's journey around the Sun. This is
+            needed because the Earth takes about 365.24219 days (or 365 days, 5
+            hours, 48 minutes, and 45 seconds) to complete one full orbit around
+            the Sun. However, our calendar normally counts only 365 days in a
+            year. To adjust the extra 0.24219 days (5 hours, 48 minutes, and 45
+            seconds), we add 6 hours each year. After four years, these extra
+            hours add up to 24 hours, which equals one full day. So, every
+            fourth year, we add February 29th as a leap day. However, this
+            method actually adds about 44.6 extra minutes every four years. Over
+            time, these extra minutes create an error. After about 25 leap
+            years, the total extra time becomes roughly 18 hours, which causes
+            the calendar to slowly fall out of sync. To fix this, we skip a leap
+            year sometimes. But since skipping removes too much time, we still
+            need to make up for about 6 hours. That’s why we add a leap year
+            once every 400 years. In other words, any year divisible by 400 is
+            also considered a leap year. This extra rule helps keep the Earth’s
+            seasons and the calendar perfectly aligned with the Sun.
+            <br />
+            The rule for leap years has three parts: <br />
+            1. Any year divisible by 4 is usually a leap year. <br />
+            2. But if the year is also divisible by 100, it is not a leap year.
+            <br />
+            3. However, if the year is divisible by 400, then it is a leap year.
+            <br />
+            So, the year 2000 was a leap year, but 1900 was not. These rules are
+            part of the Gregorian calendar system, which is used all over the
+            world. This system is very accurate and keeps the calendar almost
+            perfectly in line with the Earth’s orbit, with only a small error of
+            about 26 seconds per year, which adds up to one day every 3,236
+            years.
+          </p>
+          <br />
+          <strong
+            >The world’s calendar systems can be grouped into three main
+            types:</strong
+          >
+          <br />
+          <br />
+          <strong>Solar Calendar</strong>
+          <br />
+          A solar calendar is based on the Earth's movement around the Sun. It
+          measures a year as the time it takes for Earth to complete one full
+          orbit, which is about 365.24 days. This type of calendar keeps the
+          seasons (spring, summer, autumn, winter) aligned consistently with the
+          same months each year. The most widely used solar calendar is the
+          Gregorian calendar, followed by others like the Jalali and Ethiopian
+          calendars. The main benefit of solar calendars is that they are ideal
+          for agriculture, education, and everyday civil planning because they
+          maintain a stable relationship with the seasons. However, one
+          limitation is that they do not track the Moon’s phases, which makes
+          them less useful for religious observances that depend on lunar
+          cycles. Also, to correct the slight difference in time (about 0.24
+          days), solar calendars need leap years to stay accurate over time.
+          <br />
+          <br />
+          <strong>Lunar Calendar</strong>
+          <br />
+          A lunar calendar follows the phases of the Moon. Each month begins
+          with the sighting of a new moon and lasts approximately 29.5 days,
+          making a lunar year about 354 days long—roughly 11 days shorter than a
+          solar year. Because of this, lunar calendars do not stay aligned with
+          the seasons, and the dates of festivals and months move earlier each
+          year. The most well-known lunar calendar is the Islamic (Hijri)
+          calendar, used for determining the dates of religious events such as
+          Ramadan, Eid-ul-Fitr, and Hajj. The biggest advantage of a lunar
+          calendar is that it perfectly matches the Moon’s natural cycle, making
+          it highly suitable for religious rituals based on moon phases.
+          However, its main limitation is that it does not match the seasons,
+          which can create difficulties when timing events that depend on
+          seasonal patterns.
+          <br /><br />
+          <strong>Lunisolar Calendar</strong>
+          <br />
+          A lunisolar calendar combines the features of both lunar and solar
+          calendars. It uses lunar months (based on the Moon’s phases), but also
+          adjusts itself to the solar year by adding an extra month, known as a
+          leap month, every few years. This adjustment keeps the calendar in
+          sync with both the Moon’s cycles and the seasons of the solar year.
+          Lunisolar calendars are used in several traditional cultures,
+          including the Hebrew, Chinese, and Hindu calendars. These calendars
+          are especially useful for planning festivals that need to follow both
+          lunar timing and seasonal placement. The main benefit of a lunisolar
+          calendar is its balanced accuracy—it respects the Moon’s cycle while
+          staying seasonally accurate. However, its limitation is complexity, as
+          it requires careful calculations and astronomical observations to
+          decide when to add a leap month and maintain alignment with the solar
+          year.
+          <br />
+          <h3>
+            If you want information about the different calendars, please check
+            the links below.
+          </h3>
+          <a
+            href="https://www.britannica.com/topic/Islamic-calendar"
+            target="_blank"
+            class="links"
+            >Islamic calendar</a
+          >
+          <br />
+          <a
+            href="https://en.wikipedia.org/wiki/Jalali_calendar"
+            target="_blank"
+            class="links"
+            >Jalali calendar</a
+          >
+          <br />
+          <a
+            href="https://www.britannica.com/topic/Gregorian-calendar"
+            target="_blank"
+            class="links"
+            >Gregorian Calendar</a
+          >
+          <br />
+          <a
+            href="https://www.britannica.com/science/Julian-calendar"
+            target="_blank"
+            class="links"
+            >Julian calendar</a
+          >
+          <br />
+          <a
+            href="https://en.wikipedia.org/wiki/Hindu_calendar"
+            target="_blank"
+            class="links"
+            >Hindu calendar</a
+          >
+          <br />
+          <a
+            href="https://en.wikipedia.org/wiki/Chinese_calendar"
+            target="_blank"
+            class="links"
+            >Chinese calendar</a
+          >
+          <br />
+          <a
+            href="https://en.wikipedia.org/wiki/Ethiopian_calendar"
+            target="_blank"
+            class="links"
+            >Ethiopian calendar</a
+          >
         </div>
-    </div>
+        <div class="informationRelatedToAgeCalculation">
+          <h1>Age Calculation</h1>
+          <p>
+            To calculate age, we first check if the birth date (day) can be
+            subtracted directly from the current date. If it can, we subtract it
+            normally. However, if the current date is smaller than the birth
+            date, we borrow a full month (28, 29, 30 or 31 days, depending on
+            the month) and add it to the current date. Then, we subtract the
+            birth date from the updated current date. Next, we check if the
+            birth month can be subtracted from the current month. If it can, we
+            subtract it directly. But if the birth month is greater than the
+            current month, we borrow one full year (12 months) and add it to the
+            current month. Then we subtract the birth month from the updated
+            current month. After adjusting both the date and month, we subtract
+            the birth year from the current year to get the final age in years.
+            This method ensures that the result is always accurate, even if the
+            birth date or birth month has not yet occurred in the current year.
+          </p>
+        </div>
+      </div>
     </main>
-
     <script src="./AgeCalculator.js"></script>
-</body>
+  </body>
 </html>
