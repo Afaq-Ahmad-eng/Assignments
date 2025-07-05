@@ -13,23 +13,24 @@
       </div>
       <div id="mainCOntainer">
         <div id="container" class="container">
-          <form>
+          <form onsubmit="return validateDate()">
             <input
               type="text"
               placeholder="Enter your Name"
               id="inputForuserName"
             />
-            <input
-              type="date"
-              placeholder="Enter your date of birth"
-              id="dateOfBirthInput"
-            />
+
+            <input type="text" id="dateOfBirthInput" placeholder="MM/DD/YYYY" pattern="\d{2}-\d{2}-\d{4}">
             <input type="submit" value="Calculate" id="Calculate" />
           </form>
         </div>
         <div id="containerForInfoShowing" class="container"></div>
       </div>
+      <div class="informationHeading">
+          <h1 id="informationHeading">Information : </h1>
+        </div>
       <div class="information">
+        
         <div class="informationRelatedToTheLeapYear">
           <h1>Leap Year : </h1>
           <p>
@@ -126,54 +127,75 @@
             If you want information about the different calendars, please check
             the links below.
           </h3>
-          <a
+          <h4>Link : 
+
+            <a
             href="https://www.britannica.com/topic/Islamic-calendar"
             target="_blank"
             class="links"
             >Islamic calendar</a
-          >
+            >
+          </h4>
           <br />
-          <a
+          <h4>
+           Link : 
+            <a
             href="https://en.wikipedia.org/wiki/Jalali_calendar"
             target="_blank"
             class="links"
             >Jalali calendar</a
-          >
+            >
+          </h4>
           <br />
-          <a
+          <h4>
+          Link :
+            <a
             href="https://www.britannica.com/topic/Gregorian-calendar"
             target="_blank"
             class="links"
             >Gregorian Calendar</a
           >
+        </h4>
           <br />
-          <a
+          <h4>
+           Link : 
+            <a
             href="https://www.britannica.com/science/Julian-calendar"
             target="_blank"
             class="links"
             >Julian calendar</a
-          >
+            >
+          </h4>
           <br />
-          <a
+          <h4>
+          Link : 
+            <a
             href="https://en.wikipedia.org/wiki/Hindu_calendar"
             target="_blank"
             class="links"
             >Hindu calendar</a
-          >
+            >
+          </h4>
+            <br />
+            <h4>
+             Link : 
+              <a
+              href="https://en.wikipedia.org/wiki/Chinese_calendar"
+              target="_blank"
+              class="links"
+              >Chinese calendar</a
+              >
+            </h4>
           <br />
-          <a
-            href="https://en.wikipedia.org/wiki/Chinese_calendar"
-            target="_blank"
-            class="links"
-            >Chinese calendar</a
-          >
-          <br />
-          <a
+          <h4>
+           Link : 
+            <a
             href="https://en.wikipedia.org/wiki/Ethiopian_calendar"
             target="_blank"
             class="links"
             >Ethiopian calendar</a
-          >
+            >
+          </h4>
         </div>
         <div class="informationRelatedToAgeCalculation">
           <h1>Age Calculation Formula for this App : </h1>
