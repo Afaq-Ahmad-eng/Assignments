@@ -71,6 +71,16 @@ input[type="submit"]:hover {
   color: white;
 }
 
+.informationHeading{
+  display: flex;
+  justify-content: center;
+}
+
+#informationHeading{
+  text-decoration: underline;
+}
+
+
 @media screen and (max-width: 768px) {
     #mainCOntainer {
         flex-direction: column;
