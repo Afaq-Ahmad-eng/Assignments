@@ -1,22 +1,27 @@
 // We create calculate variable in this we will store the user birth day date
 const calculate = document.getElementById("Calculate");
 
+
 // we create a function to handle the calculation
 function handleCalculation() {
     const birthDay = document.getElementById("dateOfBirthInput").value;
+    
     const currentDate = new Date();
     const birthDayOfUser = new Date(birthDay);
     
     // Current Year and the birth day Year and asign to appropriate variable
     let currentYear =  currentDate.getFullYear();
+    
     let birthDayYear = birthDayOfUser.getFullYear();
-
+    
     // Current Month and the birth day Month and asign to appropriate variable
-    let currentMonth = currentDate.getMonth() + 1;
+    let currentMonth = (currentDate.getMonth() + 1);
+    
     let birthDayMonth = birthDayOfUser.getMonth() + 1;
 
     // Current Month and the birth day Month and asign to appropriate variable
     let birthDayDate = birthDayOfUser.getDate();
+    
     let todayDate = currentDate.getDate();
 
   //  In the if block below, we check whether the birthday date can be subtracted from the current date. If yes, then the if block will execute; otherwise, the else block will execute.
@@ -66,6 +71,7 @@ function handleCalculation() {
     birthDayMonth = ((currentMonth + 12) - birthDayMonth);
     birthDayYear = currentYear - birthDayYear;
    }
+    
   //  Here, we return currentDate, birthDayOfUser, birthDayYear, birthDayMonth, and birthDayDate. We return currentDate and birthDayOfUser as they are needed later in the code without any changes.
  return [currentDate, birthDayOfUser, birthDayYear, birthDayMonth, birthDayDate];
 }
@@ -73,6 +79,7 @@ function handleCalculation() {
 // The function below is responsible for creating and adding elements to the DOM. Within this function, we also call the handleCalculation function.
 function handleNewElements(){
   let [currentDate, birthDayOfUser, birthDayYear, birthDayMonth, birthDayDate] = handleCalculation();
+
 
   let nextBirthDay = new Date(currentDate.getFullYear(), (birthDayOfUser.getMonth()), birthDayOfUser.getDate());
   
@@ -158,5 +165,14 @@ function handleNewElements(){
 // We create an event listener to listen for a click on the Calculate button, and within this listener, we call the handleNewElements function.
 calculate.addEventListener("click", (e) => {
   e.preventDefault();
-  handleNewElements();
+
+  const birthDay = document.getElementById("dateOfBirthInput").value;
+  const datePattern = /^(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])\/\d{4}$/;
+
+  if (!datePattern.test(birthDay)) {
+    alert("Invalid date format. Enter the date as MM/DD/YYYY (e.g., 09/20/2009).");
+    return false; 
+  }else{
+    handleNewElements();
+  }
 });
