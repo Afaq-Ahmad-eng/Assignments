@@ -25,7 +25,8 @@ body{
 .information{
     margin: 1rem;
     padding: 10px;
-    width: 93vw;
+    width: 95.3%;
+    gap: 2rem;
     height: 70vh;
     color: white;
     display: flex;
@@ -70,29 +71,59 @@ input[type="submit"]:hover {
   color: white;
 }
 
+.informationHeading{
+  display: flex;
+  justify-content: center;
+}
+
+#informationHeading{
+  text-decoration: underline;
+}
+
+
 @media screen and (max-width: 768px) {
-    #mainCOntainer,
-    .information {
+    #mainCOntainer {
         flex-direction: column;
         align-items: center;
+    }
+
+    .information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 90%;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 0 auto;
     }
 
     .container,
     .informationRelatedToTheLeapYear,
     .informationRelatedToAgeCalculation {
-        width: 90vw;
+        width: 100%;
+        max-width: 90vw;
         height: auto;
+        margin-bottom: 1rem;
+        padding: 10px;
+        box-sizing: border-box;
     }
 
     #HeadingContainer {
         font-size: 1.2em;
         height: auto;
         padding: 10px;
+        text-align: center;
     }
 
     input[type="text"],
     input[type="date"],
     input[type="submit"] {
         font-size: 14px;
+        width: 100%;
+        max-width: 90vw;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
     }
 }
